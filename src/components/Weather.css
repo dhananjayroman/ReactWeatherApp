@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Orbitron:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('/images/weather-bg.jpg') no-repeat center center/cover;
+    color: #E0FFFF; /* Light Cyan for visibility */
+    font-family: 'Electrolize', sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Weather Box */
+.weather-container {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* BIGGEST "Bhor" TEXT */
+.bhor-text {
+    font-size: 6rem;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #00FFFF;
+    text-shadow: 0px 0px 25px rgba(0, 255, 255, 0.9), 0px 0px 50px rgba(0, 255, 255, 0.7);
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+/* Heading */
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0px 0px 20px rgba(125, 249, 255, 0.8);
+    animation: flicker 2s infinite alternate;
+}
+
+/* Weather Description */
+p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Flicker Animation */
+@keyframes flicker {
+    0% { text-shadow: 0px 0px 15px rgba(125, 249, 255, 1); }
+    100% { text-shadow: 0px 0px 30px rgba(125, 249, 255, 0.6); }
+}
+
+/* Fade In Effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* NEON GLOW Effect for "Bhor" */
+@keyframes neonGlow {
+    0% { text-shadow: 0px 0px 25px rgba(0, 255, 255, 1); }
+    100% { text-shadow: 0px 0px 50px rgba(0, 255, 255, 0.7); }
+}
